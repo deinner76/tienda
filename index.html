@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="botones.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="carrusel.css">
+    <link rel="shortcut icon" href="estrella.jpg" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <script src="all.min.js"></script>
+    <script src="popper.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    		<!-- Some Open Graph tags -->
+		<meta name="description" 				content="[ARTICLE_DESCRIPTION]">
+		<meta name="author" 					content="[AUTHOR_NAME_OF_THE_ARTICLE]">
+	    <meta property="og:locale" 				content="en_US"/>
+	    <meta property="og:type" 				content="article"/>
+	    <meta property="og:title" 				content="[ARTICLE_TITLE]"/>
+	    <meta property="og:description" 		content="[ARTICLE_DESCRIPTION]"/>
+	    <meta property="og:url" 				content="[ARTICLE_URL]"/>
+	    <meta property="og:site_name" 			content="[WEBSITE_NAME]"/>
+	    <meta property="article:publisher" 		content="[https://www.facebook.com/USERNAME]"/>
+	    <meta property="article:published_time" content="[PUBLISHED_TIME_OF_YOUR_ARTICLE Ex: 2015-12-08T20:50:00Z]"/>
+	   	<meta property="og:image" 				content="[MAIN_IMAGE_URL]"/>
+		    
+	    
+	    <meta name="twitter:title" 				content="[ARTICLE_TITLE]"/>
+	    <meta name="twitter:description" 		content="[ARTICLE_DESCRIPTION]"/>
+	    <meta name="twitter:image" 				content="[MAIN_IMAGE_URL]"/>
+	    <meta name="twitter:site" 				content="@[TWITTER_USERNAME]"/>
+	    <meta name="twitter:creator" 			content="@[TWITTER_USERNAME]"/>
+	    <meta name="twitter:via" 				content="[TWITTER_USERNAME]"/>
+	    <meta name="twitter:card" 				content="photo"/>
+	    <meta name="twitter:url" 				content="[ARTICLE_URL]"/>
+	    <!--
+	    <meta name="twitter:image:width" 		content="550"/>
+	    <meta name="twitter:image:height" 		content="750"/>
+		-->
+  </head>
+
+  <body class="body">
+    <!-- menu -->
+
+    <nav class="navbar navbar-expand-lg bg-menu1" id="iframe-menu">
+        <a class="navbar-brand" href="index.html">
+            <h2 style="color: black; font-size: 20px;">TIENDA ONLINE</h2>
+        </a>
+        <button class="navbar-toggler bg-light navbar-light" style="color: black;" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <img src="cart.jpeg" class="nav-link dropdown-toggle img-fluid cart-nav" height="70px"
+                        width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false"></img>
+                    <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                        <table id="lista-carrito" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+
+                        <a href="#" id="vaciar-carrito" class="btn btn-danger btn-block">Vaciar Carrito</a>
+                        <a href="#" id="procesar-pedido" class="btn btn-primary btn-block">Procesar
+                            Compra</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto mr-5">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html" style="color: black" id="menu2">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mujer.html" style="color: black">Mujer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hombre.html" style="color: black">Hombres</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="casa.html" style="color: black">Casa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quiero_vender.html" style="color: black">!Quiero Vender¡</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="como_comprar.html" style="color: black">¿Como Comprar?</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: black" href="#" id="navbarDropdownMenuLink"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                            class="fas fa-users" style="color: black"></i>&nbsp
+                        Ingresar
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Iniciar Sesión</a>
+                        <a class="dropdown-item" href="#">Registrarme</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imagen1.jpg" class="card-img-top" alt="Card image cap" />
+        </div>
+        <div class="carousel-item">
+          <img src="imagen2.jpg" class="card-img-top" alt="Card image cap" />
+        </div>
+        <div class="carousel-item">
+          <img src="imagen3.jpg" class="card-img-top" alt="Card image cap" />
+        </div>
+        <div class="carousel-item">
+          <img src="imagen4.jpg" class="card-img-top" alt="Card image cap" />
+        </div>
+        <div class="carousel-item">
+          <img src="imagen5.jpg" class="card-img-top" alt="Card image cap" />
+        </div>
+        <div class="carousel-item">
+          <img src="imagen6.jpg" class="card-img-top" alt="Card image cap" />
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="col-xl-12 col-md-12 col-sm-12">
+      <div class="row py-2 d-flex align-items-center">
+        <div class="col-md-12 text-center"></div>
+      </div>
+      <div class="container text-center text-md-left mt-5">
+        <div class="row">
+          <div class="col-md-3 mx-auto mb-4">
+            <img
+              class="card-img-top imgb rounded img-fluid"
+              src="carro.jpg"
+              alt="Card image cap"
+              height="150px"
+              width="150px"
+            />
+            <ul class="list-unstyled">
+              <li class="my-2 text-center">
+                Encuentra los mejores productos a precios increíbles. Paga como
+                quieras: Tarjetas de débito, crédito, transferencia electrónica
+                o con pesos FeriaFerió.
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 mx-auto mb-4">
+            <img
+              class="card-img-top imgb rounded img-fluid"
+              src="ciclo.jpg"
+              alt="Card image cap"
+              height="150px"
+              width="150px"
+            />
+            <ul class="list-unstyled" style="color: ">
+              <li class="my-2 text-center">
+                Forma parte de una práctica responsable con nuestro planeta.
+                Reduce, reutiliza y recicla.
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 mx-auto mb-4">
+            <img
+              class="card-img-top imgb rounded img-fluid"
+              src="ropa.jpg"
+              alt="Card image cap"
+              height="150px"
+              width="150px"
+            />
+            <ul class="list-unstyled">
+              <li class="my-2 text-center">
+                Dale una segunda oportunidad a tu ropa y accesorios que ya no
+                usas. Cobramos un 20% de costos de servicio por venta
+                concretada.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <h2 class="h0 mt-5">MUJER</h2>
+          <hr width="65%" style="margin-left: 70px" />
+          <a href="mujer.html"
+            ><button class="boton">
+              VER TODO MUJER<i
+                class="fas fa-chevron-right"
+                style="margin-left: 50px"
+              ></i></button
+          ></a>
+        </div>
+      </div>
+
+      <div class="conta">
+        <img
+          src="blusa1.jpg"
+          height="500px"
+          width="300px"
+          style="margin: auto; margin-top: 0"
+        />
+        <h3>BLUSAS</h3>
+        <p>¿Cita? Aqui esta tu outfit</p>
+        <a href="mujer.html"><button class="boton2">Ver Todo</button></a>
+      </div>
+
+      <div class="conta">
+        <img
+          src="cartera1.jpg"
+          height="500px"
+          width="300px"
+          style="margin: auto; margin-top: 0"
+        />
+        <h3>CARTERAS</h3>
+        <p>Carteras y bolsos. Son perfectas</p>
+        <a href="mujer.html"><button class="boton2">Ver Todo</button></a>
+      </div>
+
+      <div class="conta">
+        <img
+          src="pantalon1.jpg"
+          height="500px"
+          width="300px"
+          style="margin: auto; margin-top: 0"
+        />
+        <h3>PANTALONES</h3>
+        <p>Todas las tallas</p>
+        <a href="mujer.html"><button class="boton2">Ver Todo</button></a>
+      </div>
+
+      <div>
+        <div>
+          <h2 class="h0 mt-5">HOMBRE</h2>
+          <hr width="65%" style="margin-left: 70px" />
+          <a href="img/hombre.html"
+            ><button class="boton">
+              VER TODO HOMBRE<i
+                class="fas fa-chevron-right"
+                style="margin-left: 30px"
+              ></i></button
+          ></a>
+        </div>
+      </div>
+
+      <div class="conta">
+        <img
+          src="chaqueta.jpg"
+          height="500px"
+          width="300px"
+          style="margin: auto; margin-top: 0"
+        />
+        <h3>CHAQUETAS</h3>
+        <p>La que necesitas está aqui</p>
+        <a href="hombre.html"><button class="boton2">Ver Todo</button></a>
+      </div>
+
+      <div class="conta">
+        <img
+          src="zapatillas.jpg"
+          height="500px"
+          width="300px"
+          style="margin: auto; margin-top: 0"
+        />
+        <h3>ZAPATOS</h3>
+        <p>Nueva variedad</p>
+        <a href="hombre.html"><button class="boton2">Ver Todo</button></a>
+      </div>
+
+      <div class="conta">
+        <img
+          src="pantalon2.jpg"
+          height="500px"
+          width="300px"
+          style="margin: auto; margin-top: 0"
+        />
+        <h3>PANTALONES</h3>
+        <p>Encuentra tu outfit</p>
+        <a href="hombre.html"><button class="boton2">Ver Todo</button></a>
+      </div>
+
+      <div class="text-center mt-5">
+        <h2>MÁS POPULAR</h2>
+        <p class="mt-3">Conoce algunos de nuestros productos destacados</p>
+      </div>
+
+      <!--carrousel de productos-->
+
+      <div class="contenedor">
+        <main class="contenido-principal"></main>
+
+        <div class="carrusel">
+          <div class="carrusel__contenedor">
+            <button aria-label="anterior" class="carrusel__anterior">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="carrusel__lista">
+              <div class="carrusel__elemento">
+                <div class="slider-box">
+                  <p class="time1">new</p>
+                  <div>
+                    <img src="ropa1.jpg" width="250px" height="350px" />
+                  </div>
+                  <p class="detail">
+                    Ropa para hombres y mujeres
+                    <a href="#" class="price">price-$40</a>
+                  </p>
+                </div>
+              </div>
+              <div class="carrusel__elemento">
+                <div class="slider-box">
+                  <p class="time1">new</p>
+                  <div>
+                    <img src="ropa2.jpg" width="250px" height="350px" />
+                  </div>
+                  <p class="detail">
+                    Ropa para hombres y mujeres
+                    <a href="#" class="price">price-$40</a>
+                  </p>
+                </div>
+              </div>
+              <div class="carrusel__elemento">
+                <div class="slider-box">
+                  <p class="time1">new</p>
+                  <div>
+                    <img src="ropa3.jpg" width="250px" height="350px" />
+                  </div>
+                  <p class="detail">
+                    Ropa para hombres y mujeres
+                    <a href="#" class="price">price-$40</a>
+                  </p>
+                </div>
+              </div>
+              <div class="carrusel__elemento">
+                <div class="slider-box">
+                  <p class="time1">new</p>
+                  <div>
+                    <img src="ropa4.jpg" width="250px" height="350px" />
+                  </div>
+                  <p class="detail">
+                    Ropa para hombres y mujeres
+                    <a href="#" class="price">price-$40</a>
+                  </p>
+                </div>
+              </div>
+              <div class="carrusel__elemento">
+                <div class="slider-box">
+                  <p class="time1">new</p>
+                  <div>
+                    <img src="ropa5.jpg" width="250px" height="350px" />
+                  </div>
+                  <p class="detail">
+                    Ropa para hombres y mujeres
+                    <a href="#" class="price">price-$40</a>
+                  </p>
+                </div>
+              </div>
+              <div class="carrusel__elemento">
+                <div class="slider-box">
+                  <p class="time1">new</p>
+                  <div>
+                    <img src="ropa6.jpg" width="250px" height="350px" />
+                  </div>
+                  <p class="detail">
+                    Ropa para hombres y mujeres
+                    <a href="#" class="price">price-$40</a>
+                  </p>
+                </div>
+              </div>
+              <div class="carrusel__elemento">
+                <div class="slider-box">
+                  <p class="time1">new</p>
+                  <div>
+                    <img src="ropa7.jpg" width="250px" height="350px" />
+                  </div>
+                  <p class="detail">
+                    Ropa para hombres y mujeres
+                    <a href="#" class="price">price-$40</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button aria-label="anterior" class="carrusel__siguiente">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <div role="tablist" class="carrusel__indicadores"></div>
+        </div>
+      </div>
+    </div>
+
+    <button class="ver-todo">Ver Todo</button>
+    <div class="text-center mt-5">
+      <h2>NUESTRA TIENDA ONLINE</h2>
+      <p class="mt-3">Conoce algunos de nuestros productos famosos</p>
+    </div>
+
+    <footer class="page-footer color_footer footer__contacto" id="down">
+      <div class="color_footer_volver">
+        <div class="container">
+          <div class="row py-2 d-flex align-items-center">
+            <div class="col-md-12 text-center">
+              <h2 class="text-center font-weight-bold animado" id="contacto1">
+                VOLVER ARRIBA
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center text-md-left mt-5">
+        <div class="row">
+          <div class="col-md-2 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold" style="color: white">
+              Lenguaje de Programación
+            </h6>
+            <hr
+              class="bg-success-mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 85px; height: 2px; color: white"
+            />
+
+            <ul class="list-unstyled" style="color: white">
+              <li class="my-2">HTML 5</li>
+              <li class="my-2">CSS 3</li>
+              <li class="my-2">BOOTSTRAP 4</li>
+              <li class="my-2">JavaScript</li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold" style="color: white">
+              Contacto
+            </h6>
+            <hr
+              class="bg-success-mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 75px; height: 2px"
+            />
+
+            <ul class="list-unstyled" style="color: white">
+              <li class="my-2">
+                <i class="fas fa-home"></i> &nbsp Deinner Berrios
+              </li>
+              <li class="my-2">
+                <i class="far fa-envelope"></i> &nbsp deinnerberrios21@gmail.com
+              </li>
+              <li class="my-2">
+                <i class="fas fa-phone"></i> &nbsp +58-426-219-33-74
+              </li>
+              <li class="my-2">
+                <i class="fas fa-print"></i> &nbsp 0212-433-44-90
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold" style="color: white">
+              Dirección
+            </h6>
+            <hr
+              class="bg-success-mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 125px; height: 2px; color: white"
+            />
+            <p class="mt-2" style="color: white">
+              Calle principal, URB Kennedy, Las Adjuntas, Parroquia Macarao
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-copyright text-center py-3" style="color: white">
+          <p>&copy; copyright &nbsp Deinner</p>
+          <p>Designed By The Deinner</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="carruselApp.js"></script>
+    <script src="carrusel.js"></script>
+    <script src="all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery.js"></script>
+    <script src="scroll.js"></script>
+    <script src="sweetalert2.min.js"></script>
+    <script src="carrito.js"></script>
+    <script src="pedido.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="compra.js"></script>
+    <script src="functions.js"></script>
+  </body>
+</html>
